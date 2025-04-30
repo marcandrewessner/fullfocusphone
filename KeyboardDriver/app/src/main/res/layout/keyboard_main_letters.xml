@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/keyboard_main_textview_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABC"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="#111111"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"/>
+
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/keyboard_main_linearlayout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>
