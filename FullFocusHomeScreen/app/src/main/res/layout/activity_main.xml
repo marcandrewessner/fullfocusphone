@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingHorizontal="24dp"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/activity_main_textview_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:12"
+                android:textColor="@color/silver"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/activity_main_textview_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-8dp"
+                android:text="30. Dec"
+                android:textColor="@color/silver"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:id="@+id/activity_main_linearlayout_applist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/app_list_widget"/>
+                <include layout="@layout/app_list_widget"/>
+                <include layout="@layout/app_list_widget"/>
+                <include layout="@layout/app_list_widget"/>
+                <include layout="@layout/app_list_widget"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/activity_main_linearlayout_functionlist"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="24dp"
+        android:paddingLeft="20dp"
+        android:gravity="center">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"/>
+
+        <!--
+        <include layout="@layout/function_widget"/>
+        <include layout="@layout/function_widget"/>
+        <include layout="@layout/function_widget"/>
+        -->
+
+    </LinearLayout>
+
+</LinearLayout>

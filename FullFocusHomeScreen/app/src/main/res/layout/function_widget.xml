@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="@drawable/function_widget_background_inactive"
+    android:clipToOutline="true"
+    android:layout_marginVertical="8dp"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/function_widget_imageview_icon"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/function_icon_torch"/>
+
+</FrameLayout>

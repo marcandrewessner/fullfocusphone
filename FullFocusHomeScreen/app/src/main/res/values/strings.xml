@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FullFocusHomeScreen</string>
+
+    <string-array name="app_package_list">
+        <item>com.whatsapp</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.calendar</item>
+        <item>com.google.android.dialer</item>
+        <item>ch.sbb.mobile.android.b2c</item>
+        <item>com.azure.authenticator</item>
+        <item>com.android.chrome</item>
+        <item>com.android.deskclock</item>
+        <!-- <item>com.scanteam.qrcodereader</item> -->
+        <item>com.android.settings</item>
+    </string-array>
+    
+    <string-array name="app_package_list_emulator">
+        <item>com.google.android.youtube</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.apps.docs</item>
+        <item>com.android.chrome</item>
+        <item>com.google.android.youtube</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.apps.docs</item>
+        <item>com.android.chrome</item>
+        <item>com.google.android.youtube</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.apps.docs</item>
+        <item>com.android.chrome</item>
+        <item>com.google.android.youtube</item>
+        <item>com.google.android.apps.messaging</item>
+        <item>com.google.android.apps.docs</item>
+        <item>com.android.chrome</item>
+    </string-array>
+</resources>

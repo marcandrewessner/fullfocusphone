@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_light">#3C3C3C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="silver">#A5A5A5</color>
+    <color name="night">#FF000F08</color>
+    <color name="gunmetal">#FF1C3738</color>
+    <color name="gunmetal_light">#3A696A</color>
+    <color name="naplesyellow">#FFF9DB6D</color>
+</resources>
