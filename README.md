@@ -8,11 +8,11 @@ Before we all fell in love with our Smartphones, the 2007 Keynote January 9th, w
 
 I love my iPhone of course. Who doesn't? But with it came the following propblems:
 
-- It pulls our destraction away from "boring" tasks like finishing to write the code documentation or doing our math assignments.
+- It pulls our destraction away from "boring" tasks like finishing writing the code documentation or doing our math assignments.
 - Even when sitting in a train from Zürich to Lucerne (1h), I cannot really enjoy the ride. Or not enjoy it. It's like not being there at all. There is no room for my Brain to turn off.
 - Even when I just want to google the next rest
 
-## What alternatives do I have?
+## But what alternatives do I have?
 
 When trying to search for an alternative to our iPhones that has just the essentials, one of the first options that comes to mind is a nostalgic Nokia. But for our day to day usages it is not enough. Without Apps like Authenticator you are stuck at two factor authentications when logging in to your email or other services. Lets break it down into individual features:
 
@@ -35,9 +35,13 @@ When trying to search for an alternative to our iPhones that has just the essent
 
 ## Project Explained
 
-The displayed hardware is built by DuoQin ([duoqin.com](https://www.duoqin.com/)) and is called the F22 Pro. It comes with AndroidOS (version )
-- Android based phone; because WhatsApp, Authenticator, Cardless payment, SBB
-- Minimal Homescreen
+The depicted phone (DuoQin F22 Pro, made by Xiomi [duoqin.com](https://www.duoqin.com/)) features a TODO-inch LCD touchscreen with a T9 button keyboard. It comes with Android TODO version. The main problem here is, that the stock Android it comes with does not work well with the keyboard and ruins the whole retro, minimal vibe of the beatifully designed device. Furthermore the biggest challenge is the keyboard. Altough the physical keyboard features latin letters printed on them, the keyboard can either be used to enter chinese characters or just numbers. 
+
+Rendering the following problems to be solved:
+- Minimalistic and functional homescreen, displaying the apps in a more sutable way and T9 keyboard friendly
+- Keyboard driver; creating software that allows the T9 hardware keyboard to be used simmilar to old nokia phones
+
+The homescreen solution comes with the `FullFocusHomeScreen` project and the driver with the `KeyboardDriver` project.
 
 ## How to setup this phone
 
@@ -49,6 +53,10 @@ The displayed hardware is built by DuoQin ([duoqin.com](https://www.duoqin.com/)
 
 
 ## Personal experience
+
+I used the DuoQin F22 Pro phone with the configuration (`FullFocusHomeScreen`, `KeyboardDriver`) for eight months as my main phone. At the beginning it was frustrating to not message my friends as quick as I wanted. But I got pretty good within the first week. For concentrating on my studies, it helped primarily for shutting of and being in the moment. One would think it is not as distracting as an iPhone buzzing with push notifications from a bunch of different apps. Yes the notifications where a lot less. Only those from WhatsApp. With a lot of habits still being the same just a different device, the phone was still misplaced on the table instead the backpack. Unexpectedly it really helped in decompressing, in taking breaks. When commuting in a train or waiting for a bus, this phone just didn't do it for entertainment. Noted; this is a good thing. 
+
+After exams I continued using it for my day to day. And it did the job for me: Hotspot for working in the train or bus, WhatsApp, Spotify, Google Calendar and other utility Applications. Just the basics. 
 
 I used this phone in the configured over a period of 3/4 years. 
 Eventually I relocated to a different country, where I wanted zero friction when browsing or interacting with others over whatsapp.
@@ -63,10 +71,11 @@ if you want to work in train, hotspot is no problems
 
 ## Benefits and Limitations
 
+- ✅ All needed tools work on this (Authenticator, Calendar e.g Google Calendar)
+- ✅ Device is unentertaining enough to leave in your pocket
 - ❌ Takes time to get used to the keyboard, even then not as fast as iPhone
 - ❌ Apps like Slack or Outlook work but are very unhandy to write with
-- ✅ Phone has all needed capabilities and is unattractive enough to leave in your pocket
-- ✅ 
+- ❌ Phone is not CE/FCC certified, thus not elegible for the european / US market
 
 
 - Nice: distance to phone, phone becoming tool
