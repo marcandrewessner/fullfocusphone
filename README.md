@@ -39,7 +39,21 @@ The displayed hardware is built by DuoQin ([duoqin.com](https://www.duoqin.com/)
 - Android based phone; because WhatsApp, Authenticator, Cardless payment, SBB
 - Minimal Homescreen
 
+## How to setup this phone
+
+- Todo: build apk >> make available to install (show adb commands)
+- changing OS (Launcher to set the home screen)
+- show how to vonfigure app list, activate / deacrivate sidebar
+- changing keyboard to the app because chinese
+- set the keyboard from adb, ahow how to change speed values
+
+
 ## Personal experience
+
+I used this phone in the configured over a period of 3/4 years. 
+Eventually I relocated to a different country, where I wanted zero friction when browsing or interacting with others over whatsapp.
+Due to sheer conveinience I did not switch back.
+
 - Used this for 3/4 year. During exam session and also normal semester.
 Exam is nice. You get to be less distracted (at least from phone, no ista scrolling/youtube on phone)
 while still giving tools needed. 
@@ -48,6 +62,13 @@ Akku holding for two days, because not that much needed.
 if you want to work in train, hotspot is no problems
 
 ## Benefits and Limitations
+
+- ❌ Takes time to get used to the keyboard, even then not as fast as iPhone
+- ❌ Apps like Slack or Outlook work but are very unhandy to write with
+- ✅ Phone has all needed capabilities and is unattractive enough to leave in your pocket
+- ✅ 
+
+
 - Nice: distance to phone, phone becoming tool
 - Bad: Slow text editing, needs training
 - Bad: Apps like Slack & stuff works but is very unhandy
