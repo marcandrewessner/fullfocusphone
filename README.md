@@ -45,6 +45,10 @@ The homescreen solution comes with the `FullFocusHomeScreen` project and the dri
 
 ## How to setup this phone
 
+To setup the phone `FullFocusHomeScreen.apk` and `KeyboardDriver.apk` need to be installed on the phone.
+
+Note: as of now, the settings are stored in the android project xml files
+
 - Todo: build apk >> make available to install (show adb commands)
 - changing OS (Launcher to set the home screen)
 - show how to vonfigure app list, activate / deacrivate sidebar
@@ -56,18 +60,7 @@ The homescreen solution comes with the `FullFocusHomeScreen` project and the dri
 
 I used the DuoQin F22 Pro phone with the configuration (`FullFocusHomeScreen`, `KeyboardDriver`) for eight months as my main phone. At the beginning it was frustrating to not message my friends as quick as I wanted. But I got pretty good within the first week. For concentrating on my studies, it helped primarily for shutting of and being in the moment. One would think it is not as distracting as an iPhone buzzing with push notifications from a bunch of different apps. Yes the notifications where a lot less. Only those from WhatsApp. With a lot of habits still being the same just a different device, the phone was still misplaced on the table instead the backpack. Unexpectedly it really helped in decompressing, in taking breaks. When commuting in a train or waiting for a bus, this phone just didn't do it for entertainment. Noted; this is a good thing. 
 
-After exams I continued using it for my day to day. And it did the job for me: Hotspot for working in the train or bus, WhatsApp, Spotify, Google Calendar and other utility Applications. Just the basics. 
-
-I used this phone in the configured over a period of 3/4 years. 
-Eventually I relocated to a different country, where I wanted zero friction when browsing or interacting with others over whatsapp.
-Due to sheer conveinience I did not switch back.
-
-- Used this for 3/4 year. During exam session and also normal semester.
-Exam is nice. You get to be less distracted (at least from phone, no ista scrolling/youtube on phone)
-while still giving tools needed. 
-
-Akku holding for two days, because not that much needed.
-if you want to work in train, hotspot is no problems
+After exams I continued using it for my day to day. And it did the job for me: Hotspot for working in the train or bus, WhatsApp, Spotify, Google Calendar and other utility Applications. Just the basics.
 
 ## Benefits and Limitations
 
@@ -76,10 +69,3 @@ if you want to work in train, hotspot is no problems
 - ❌ Takes time to get used to the keyboard, even then not as fast as iPhone
 - ❌ Apps like Slack or Outlook work but are very unhandy to write with
 - ❌ Phone is not CE/FCC certified, thus not elegible for the european / US market
-
-
-- Nice: distance to phone, phone becoming tool
-- Bad: Slow text editing, needs training
-- Bad: Apps like Slack & stuff works but is very unhandy
-
-- Phone is nice for getting off, notable nice for holidays for example 
