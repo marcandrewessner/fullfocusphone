@@ -35,6 +35,8 @@ When trying to search for an alternative to our iPhones that has just the essent
 
 ## Project Explained
 
+![overview image](images/overview.png)
+
 The depicted phone (DuoQin F22 Pro, made by Xiomi [duoqin.com](https://www.duoqin.com/)) features a TODO-inch LCD touchscreen with a T9 button keyboard. It comes with Android TODO version. The main problem here is, that the stock Android it comes with does not work well with the keyboard and ruins the whole retro, minimal vibe of the beatifully designed device. Furthermore the biggest challenge is the keyboard. Altough the physical keyboard features latin letters printed on them, the keyboard can either be used to enter chinese characters or just numbers. 
 
 Rendering the following problems to be solved:
@@ -47,13 +49,41 @@ The homescreen solution comes with the `FullFocusHomeScreen` project and the dri
 
 To setup the phone `FullFocusHomeScreen.apk` and `KeyboardDriver.apk` need to be installed on the phone.
 
-Note: as of now, the settings are stored in the android project xml files
+Note: as of now, settings such as the list of apps for the homescreen or the time interval between switching letters on the keyboard, are coded into the app. Therefore the source code has to be changed as following:
 
-- Todo: build apk >> make available to install (show adb commands)
-- changing OS (Launcher to set the home screen)
-- show how to vonfigure app list, activate / deacrivate sidebar
-- changing keyboard to the app because chinese
-- set the keyboard from adb, ahow how to change speed values
+### Configuring the app list
+
+In order for the homescreen to know, wich apps to display and in which order, the variable `app_package_list` is used. This is a string array as seen below, listing the package names.
+Note: for the simulator the `app_package_list_emulator` is used and is currently set in the `MainActivity.kt` file.
+
+```kotlin
+// File: MainActivity.kt
+appPackages = resources.getStringArray(R.array.app_package_list_emulator).toList()
+```
+
+```jsx
+// File: values/strings.xml
+<string-array name="app_package_list">
+    <item>com.whatsapp</item>
+    <item>com.google.android.apps.messaging</item>
+    <item>com.google.android.calendar</item>
+    <item>com.google.android.dialer</item>
+    <item>ch.sbb.mobile.android.b2c</item>
+    <item>com.azure.authenticator</item>
+    <item>com.android.chrome</item>
+    <item>com.android.deskclock</item>
+    <item>com.android.settings</item>
+</string-array>
+```
+
+### Configuring the keyboard
+
+The keyboard comes with a swiss-german alphabet. 
+
+```kotlin
+// File: inputmethodkeyboards/KeyboardModeLetters.kt
+private val TIME_SAME: Long = 800
+```
 
 
 ## Personal experience
@@ -61,6 +91,12 @@ Note: as of now, the settings are stored in the android project xml files
 I used the DuoQin F22 Pro phone with the configuration (`FullFocusHomeScreen`, `KeyboardDriver`) for eight months as my main phone. At the beginning it was frustrating to not message my friends as quick as I wanted. But I got pretty good within the first week. For concentrating on my studies, it helped primarily for shutting of and being in the moment. One would think it is not as distracting as an iPhone buzzing with push notifications from a bunch of different apps. Yes the notifications where a lot less. Only those from WhatsApp. With a lot of habits still being the same just a different device, the phone was still misplaced on the table instead the backpack. Unexpectedly it really helped in decompressing, in taking breaks. When commuting in a train or waiting for a bus, this phone just didn't do it for entertainment. Noted; this is a good thing. 
 
 After exams I continued using it for my day to day. And it did the job for me: Hotspot for working in the train or bus, WhatsApp, Spotify, Google Calendar and other utility Applications. Just the basics.
+
++ video calls not so nice because camera at bottom
++ homebutton = red button => hang up
+
+Video of typing
+![video of typing "Hey how are you" on the phone](images/typing.mp4)
 
 ## Benefits and Limitations
 
