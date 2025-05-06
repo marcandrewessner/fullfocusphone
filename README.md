@@ -95,8 +95,9 @@ After exams I continued using it for my day to day. And it did the job for me: H
 + video calls not so nice because camera at bottom
 + homebutton = red button => hang up
 
-Video of typing
-[![play video of yping](images/typing_thumbnail.png)](https://www.youtube.com/shorts/Qr2kkgi_Zmg)
+<a href="https://www.youtube.com/shorts/Qr2kkgi_Zmg">
+<img src="images/typing_thumbnail.png" width="200px">
+</a>
 
 ## Benefits and Limitations
 
