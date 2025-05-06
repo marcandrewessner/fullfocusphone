@@ -110,6 +110,7 @@ Minor observations: Video calls weren’t great because the camera is placed at 
 <a style="display:block;" href="https://www.youtube.com/shorts/Qr2kkgi_Zmg">
 <img src="images/typing_thumbnail.png" width="200px">
 </a>
+
 Click on the image to view the video.
 
 
