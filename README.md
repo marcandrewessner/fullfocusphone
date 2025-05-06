@@ -2,58 +2,49 @@
 
 # Full-Focus Phone
 
-Before we all fell in love with our Smartphones, the 2007 Keynote January 9th, where Steve Jobs presented a novel device that has now become the doors to our worlds, our phones used to be like every other gadgets. Just tools. Easy to lay to the side. We controlled when we picked it up. We controlled when to turn off. The phone (you are propably using to read this) is no doubts magical. But when was the last time you really laid it away. Not upside down on a table, constantly drawing our eyes, awaiting the next buzz, the next signal?
+Before we all fell in love with our smartphones, on January 9th 2007, when Steve Jobs presented a novel device that has now become the doorway to our world, our phones used to be just tools. Easy to lay off to the side. We controlled when we picked them up. We controlled when we turned them off. The phone (you're probably using it to read this) is no doubt magical. But when was the last time you really put it away? Not upside down on a table, constantly drawing our eyes, awaiting the next buzz.
 
-## Our iPhone can do everything, why moving "back"?
+## Our iPhones can do everything, why moving "back"?
 
-I love my iPhone of course. Who doesn't? But with it came the following propblems:
+I love my iPhone, of course. Who doesn't? But with it came the following problems:
 
-- It pulls our destraction away from "boring" tasks like finishing writing the code documentation or doing our math assignments.
-- Even when sitting in a train from Zürich to Lucerne (1h), I cannot really enjoy the ride. Or not enjoy it. It's like not being there at all. There is no room for my Brain to turn off.
-- Even when I just want to google the next rest
+- It pulls our attention away from "boring" tasks like finishing code documentation or doing our math assignments.
+- When sitting on a train from Zürich to Lucerne (1 hour), I can't really enjoy the ride (or not enjoy it). It's like not being there at all. There's no room for my brain to turn off.
+- Opening a phone to search for something often leads to getting sidetracked in a different app, without completing the original task.
 
-## But what alternatives do I have?
-
-When trying to search for an alternative to our iPhones that has just the essentials, one of the first options that comes to mind is a nostalgic Nokia. But for our day to day usages it is not enough. Without Apps like Authenticator you are stuck at two factor authentications when logging in to your email or other services. Lets break it down into individual features:
-
-| **Category**          | **iPhone**                         | **This device (focus phone)**                                           | **Nokia (KaiOS)**                                | **Light Phone III**                        |
-| --------------------- | ---------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
-| **WhatsApp**          | ✅                                 | ✅ slow typing (because T9 keyboard)                                    | ❌ (no support anymore, no desktop/web version)  | ❌                                         |
-| **Spotify**           | ✅                                 | ✅                                                                      | ❌ very bad app (music stops when screen off...) | ❌                                         |
-| **SMS**               | ✅                                 | ✅ slow typing (because T9 keyboard)                                    | ✅ slow typing (because T9 keyboard)             | ✅                                         |
-| **Phone Calls**       | ✅                                 | ✅                                                                      | ✅                                               | ✅                                         |
-| **Video Calls**       | ✅                                 | ✅ camera at the bottom => weird angle but ok                           | ❌                                               | ❌                                         |
-| **Maps / Navigation** | ✅                                 | ✅                                                                      | ❌ very bad app                                  | ✅                                         |
-| **Internet Browsing** | ✅                                 | ✅                                                                      | ❌ very bad app                                  | ❌                                         |
-| **Cardless Pay**      | ✅                                 | ❌ altough G-Wallet works, I don't trust the CCC certified phone enough | ❌                                               | ❌                                         |
-| **Other Tools**       | ✅ e.g. Authenticator, Ticket App  | ✅                                                                      | ❌                                               | ❌                                         |
-| **Camera**            | ✅ great as you know (12MP)        | ✅ (front 8MP & back)                                                   | ❌ (horrible camera if any)                      | ✅ (front only)                            |
-| **Hotspot**           | ✅                                 | ✅                                                                      | ✅                                               | ✅                                         |
-| **Screen**            | best quality, touch, OLED color    | great quality, touch, LCD color                                         | ok quality, no touch, LCD                        | good quality, touch, e-ink (black & white) |
-| **Battery**           | min once a day                     | once every two days                                                     | once every 2-3 days                              | once a week                                |
-| **Comment**           | comes with temptation/distractions | (see in personal experience)                                            | too many tools missing like authenticator...     | -                                          |
-
-## Project Explained
+## Introducing the FullFocusPhone
 
 ![overview image](images/overview.png)
 
-The depicted phone (DuoQin F22 Pro, made by Xiomi [duoqin.com](https://www.duoqin.com/)) features a TODO-inch LCD touchscreen with a T9 button keyboard. It comes with Android TODO version. The main problem here is, that the stock Android it comes with does not work well with the keyboard and ruins the whole retro, minimal vibe of the beatifully designed device. Furthermore the biggest challenge is the keyboard. Altough the physical keyboard features latin letters printed on them, the keyboard can either be used to enter chinese characters or just numbers. 
+This project uses the DuoQin F22 Pro hardware together with a custom-built homescreen and keyboard driver to create a phone that’s just a tool. An alternative that does the essentials, without the entertainment and distractions.
+
+Out of the box, this phone comes with a homescreen looking like 2016 and a T9 keyboard that can only be used in mandarin or entering just numbers.
 
 Rendering the following problems to be solved:
-- Minimalistic and functional homescreen, displaying the apps in a more sutable way and T9 keyboard friendly
-- Keyboard driver; creating software that allows the T9 hardware keyboard to be used simmilar to old nokia phones
+1. Minimalistic and functional homescreen, displaying the apps in a more suitable way and T9 keyboard friendly. (`FullFocusHomeScreen.apk`)
+2. Keyboard driver that supports the German alphabet (specifically Swiss German) (`KeyboardDriver.apk`)
 
-The homescreen solution comes with the `FullFocusHomeScreen` project and the driver with the `KeyboardDriver` project.
+## How to setup the F22 Pro?
 
-## How to setup this phone
+The `FullFocusHomeScreen.apk` and `KeyboardDriver.apk` apps need to be installed. This can be achieved by using the android debug bridge (adb) as follows:
 
-To setup the phone `FullFocusHomeScreen.apk` and `KeyboardDriver.apk` need to be installed on the phone.
+```bash
+# 1. Verify the device connection:
+adb devices
+# 2. Install both apks:
+adb install path/to/FullFocusHomeScreen.apk
+adb install path/to/KeyboardDriver.apk
+# 3. Set the T9 keyboard driver as default
+adb shell ime disable com.android.inputmethod.latin/.LatinIME  
+adb shell ime enable com.marcandre.ma9keyboard/.inputmethodservice.KeyboardMain  
+adb shell ime set com.marcandre.ma9keyboard/.inputmethodservice.KeyboardMain
+```
 
-Note: as of now, settings such as the list of apps for the homescreen or the time interval between switching letters on the keyboard, are coded into the app. Therefore the source code has to be changed as following:
+Note: as of now, settings such as the list of apps for the homescreen or the time interval between switching letters on the keyboard, are hard-coded into the app. To change these edit the source code and recompile the apks.
 
 ### Configuring the app list
 
-In order for the homescreen to know, wich apps to display and in which order, the variable `app_package_list` is used. This is a string array as seen below, listing the package names.
+In order for the homescreen to know, which apps to display and in which order, the variable `app_package_list` is used. This is a string array as seen below, listing the package names.
 Note: for the simulator the `app_package_list_emulator` is used and is currently set in the `MainActivity.kt` file.
 
 ```kotlin
@@ -78,7 +69,7 @@ appPackages = resources.getStringArray(R.array.app_package_list_emulator).toList
 
 ### Configuring the keyboard
 
-The keyboard comes with a swiss-german alphabet. 
+To change the time interval between a double press on the same letter, change the `TIME_SAME` (ms) variable.
 
 ```kotlin
 // File: inputmethodkeyboards/KeyboardModeLetters.kt
@@ -86,23 +77,57 @@ private val TIME_SAME: Long = 800
 ```
 
 
-## Personal experience
+## Personal experience using this as my day to day device
 
-I used the DuoQin F22 Pro phone with the configuration (`FullFocusHomeScreen`, `KeyboardDriver`) for eight months as my main phone. At the beginning it was frustrating to not message my friends as quick as I wanted. But I got pretty good within the first week. For concentrating on my studies, it helped primarily for shutting of and being in the moment. One would think it is not as distracting as an iPhone buzzing with push notifications from a bunch of different apps. Yes the notifications where a lot less. Only those from WhatsApp. With a lot of habits still being the same just a different device, the phone was still misplaced on the table instead the backpack. Unexpectedly it really helped in decompressing, in taking breaks. When commuting in a train or waiting for a bus, this phone just didn't do it for entertainment. Noted; this is a good thing. 
+I used the DuoQin F22 Pro (with my homescreen and keyboard driver) for eight months as my main phone. At the beginning, it was frustrating not being able to message my friends as quickly as I wanted, mainly because the keyboard slowed down typing quite a bit. But I got pretty good within the first week.
 
-After exams I continued using it for my day to day. And it did the job for me: Hotspot for working in the train or bus, WhatsApp, Spotify, Google Calendar and other utility Applications. Just the basics.
+During my exam preparation phase, I was hoping the phone would help me stay focused. But with habits remaining the same, just on a different device. It didn’t make a huge difference. A WhatsApp message is the same regardless.
 
-+ video calls not so nice because camera at bottom
-+ homebutton = red button => hang up
+Unexpectedly though, it was great for decompressing and taking breaks. When commuting on a train or waiting for a bus, this phone didn’t cut it for entertainment, which made it easier to stay in the moment.
 
-<a href="https://www.youtube.com/shorts/Qr2kkgi_Zmg">
+After exams, I continued using it day to day. And it did the job for me: hotspot for working on the train or bus, WhatsApp, Spotify, Google Calendar, and other utility apps. Just the basics.
+
+When I relocated to Berlin, I stopped using this phone because I wanted frictionless access to platforms like eBay Kleinanzeigen and similar services.
+
+Minor observations: Video calls weren’t great because the camera is placed at the bottom, which results in a weird angle. Also, the red home button doubles as a hang-up button, so I accidentally ended a few calls just trying to turn off the screen.
+
+
+## Summary Pros and Cons
+
+- ✅ All necessary tools work on this phone (e.g. Authenticator, Google Calendar)
+- ✅ Device is unentertaining enough to stay in your pocket
+- ✅ Good battery life (typically lasts 2 days)
+- ✅ Hotspot works reliably for working on the go
+- ❌ Takes time to get used to the keyboard; even then, it's not as fast as an iPhone
+- ❌ Apps like Slack or Outlook work, but writing with them is very cumbersome
+- ❌ Phone is not CE/FCC certified, and therefore not eligible for the European or US market
+
+
+# Appendix
+
+## Video of typing on this phone
+
+<a style="display:block;" href="https://www.youtube.com/shorts/Qr2kkgi_Zmg">
 <img src="images/typing_thumbnail.png" width="200px">
 </a>
+Click on the image to view the video.
 
-## Benefits and Limitations
 
-- ✅ All needed tools work on this (Authenticator, Calendar e.g Google Calendar)
-- ✅ Device is unentertaining enough to leave in your pocket
-- ❌ Takes time to get used to the keyboard, even then not as fast as iPhone
-- ❌ Apps like Slack or Outlook work but are very unhandy to write with
-- ❌ Phone is not CE/FCC certified, thus not elegible for the european / US market
+## Comparison between non-distracting phone alternatives
+
+| **Category**          | **iPhone**                         | **This device (focus phone)**                                           | **Nokia (KaiOS)**                                | **Light Phone III**                        |
+| --------------------- | ---------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
+| **WhatsApp**          | ✅                                 | ✅ slow typing (because T9 keyboard)                                    | ❌ (no support anymore, no desktop/web version)  | ❌                                         |
+| **Spotify**           | ✅                                 | ✅                                                                      | ❌ very bad app (music stops when screen off...) | ❌                                         |
+| **SMS**               | ✅                                 | ✅ slow typing (because T9 keyboard)                                    | ✅ slow typing (because T9 keyboard)             | ✅                                         |
+| **Phone Calls**       | ✅                                 | ✅                                                                      | ✅                                               | ✅                                         |
+| **Video Calls**       | ✅                                 | ✅ camera at the bottom => weird angle but ok                           | ❌                                               | ❌                                         |
+| **Maps / Navigation** | ✅                                 | ✅                                                                      | ❌ very bad app                                  | ✅                                         |
+| **Internet Browsing** | ✅                                 | ✅                                                                      | ❌ very bad app                                  | ❌                                         |
+| **Cardless Pay**      | ✅                                 | ❌ although G-Wallet works, I don't trust the CCC certified phone enough | ❌                                               | ❌                                         |
+| **Other Tools**       | ✅ e.g. Authenticator, Ticket App  | ✅                                                                      | ❌                                               | ❌                                         |
+| **Camera**            | ✅ great as you know (12MP)        | ✅ (front 8MP & back)                                                   | ❌ (horrible camera if any)                      | ✅ (front only)                            |
+| **Hotspot**           | ✅                                 | ✅                                                                      | ✅                                               | ✅                                         |
+| **Screen**            | best quality, touch, OLED color    | great quality, touch, LCD color                                         | ok quality, no touch, LCD                        | good quality, touch, e-ink (black & white) |
+| **Battery**           | min once a day                     | once every two days                                                     | once every 2-3 days                              | once a week                                |
+| **Comment**           | comes with temptation/distractions | (see in personal experience)                                            | too many tools missing like authenticator...     | -                                          |
