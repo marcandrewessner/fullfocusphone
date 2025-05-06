@@ -96,7 +96,7 @@ After exams I continued using it for my day to day. And it did the job for me: H
 + homebutton = red button => hang up
 
 Video of typing
-![video of typing "Hey how are you" on the phone](images/typing.webm)
+[![play video of yping](images/typing_thumbnail.png)](https://www.youtube.com/shorts/Qr2kkgi_Zmg)
 
 ## Benefits and Limitations
 
